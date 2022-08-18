@@ -10,12 +10,11 @@
     # close the browser
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
 # launching the driver
-driver=webdriver.Chrome(executable_path="c:\\users\\admin\\Downloads\\chromedriver.exe")
+driver=webdriver.Chrome()
 # Maximizing the window
 driver.maximize_window()
 
@@ -32,4 +31,4 @@ link.click()
 # Pause the page for 5 seconds
 time.sleep(5)
 # Close the bowser window
-driver.quit()
+driver.close()

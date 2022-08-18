@@ -9,14 +9,11 @@
     # close the browser
 
 from selenium import webdriver
-from unicodedata import name
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 import time
 
 # Initialize webdriver
-driver = webdriver.Chrome(executable_path="c:\\users\\admin\\Downloads\\chromedriver.exe")
+driver = webdriver.Chrome()
 
 # Open URL and maximize window
 driver.get("https://www.amazon.in/")
@@ -31,9 +28,8 @@ Prime = driver.find_element(by=By.XPATH,value ="//*[@id='s-refinements']/div[3]/
 Prime.click()
 
 # Selecting onepluse bluetooth earphones
-oneplus = driver.find_element(by=By.XPATH,value ="//*[@id='search']/div[1]/div[1]/div/span[3]/div[2]/div[5]/div/div/div/div/div[2]/span/a/div/img")
+oneplus = driver.find_element(by=By.XPATH,value ="//body/div[@id='a-page']/div[@id='search']/div[1]/div[1]/div[1]/span[3]/div[2]/div[5]/div[1]/div[1]/div[1]/div[1]/div[2]/span[1]/a[1]/div[1]/img[1]")
 oneplus.click()
-
 time.sleep(3)
 driver.quit()
 

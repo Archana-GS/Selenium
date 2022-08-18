@@ -1,6 +1,6 @@
 # Learn to navigate to Facebook web page and enter the Username and password and perform click action using selenium
 
-# Steps :
+#Steps :
 
     # Launching Chrome Driver
     # Navigate to Facebook web page
@@ -18,7 +18,7 @@ from selenium.webdriver.common.by import By
 import time
 
 # launching the driver
-driver=webdriver.Chrome(executable_path="c:\\users\\admin\\Downloads\\chromedriver.exe")
+driver=webdriver.Chrome()
 # Maximizing the window
 driver.maximize_window()
 
@@ -40,4 +40,4 @@ button.click()
 # Pause the page for 5 seconds
 time.sleep(5)
 # Close the bowser window
-driver.quit()        
+driver.close()        
