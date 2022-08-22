@@ -28,10 +28,11 @@ print(driver.title)
 
 # Locate the button and perform click action
 temp_txt=driver.find_element(by=By.XPATH,value ="//span[@id='temperature']")
-temp_txt.text
+temperature=int((temp_txt.text)[0:2])
+print(temperature)
 
 # Perform click action on Moisturizer if temperature is less than 20°C
-if  (temp_txt.text) <= ('20°C') :
+if  temperature <= 20 :
     time.sleep(2)
     button=driver.find_element(by=By.XPATH,value = "//button[contains(text(),'Buy moisturizers')]").click()
     items = driver.find_elements(by=By.XPATH,value ="//p[contains(text(),'Price')]")
@@ -49,7 +50,7 @@ if  (temp_txt.text) <= ('20°C') :
     least_item_text = item.find_element(by=By.XPATH,value ="//p[contains(text(),'"+mini+"')]/following-sibling::button[@class='btn btn-primary']").click()
 
 # Perform click action on Sunscreens if temperature is more than 30°C        
-elif (temp_txt.text) >= ('30°C') :
+elif temperature >= 30 :
     time.sleep(2)
     button=driver.find_element(by=By.XPATH,value = "//button[contains(text(),'Buy sunscreens')]").click()
     items = driver.find_elements(by=By.XPATH,value ="//p[contains(text(),'Price')]")
