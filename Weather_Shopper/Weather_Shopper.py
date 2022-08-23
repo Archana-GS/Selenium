@@ -67,7 +67,7 @@ if  temperature >= 30 :
     items = driver.find_elements(by=By.XPATH,value =price_of_all_products)
     
 price_list_all_products = []
-least_priced_item = 1000
+maximum_priced_item = 1000
 # calling function for least priced product    
 get_least_priced_product() 
    
