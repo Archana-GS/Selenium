@@ -45,6 +45,8 @@ print("current temperature is :",temperature,"°C")
 
 # Creating function for least priced product
 def get_least_priced_product():
+    price_list_all_products = []
+    maximum_priced_item = 1000
     for item in items:
         print(item)
         item_price = int((item.text)[-3::])
@@ -66,8 +68,6 @@ elif  temperature > 25 :
     sunscreens_button = driver.find_element(by = By.XPATH,value = sunscreens_button).click()
     items = driver.find_elements(by = By.XPATH,value = price_of_all_products)
     
-price_list_all_products = []
-maximum_priced_item = 1000
 # calling function for least priced product    
 get_least_priced_product() 
    
