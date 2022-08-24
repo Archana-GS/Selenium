@@ -32,7 +32,7 @@ except Exception as e:
     print("oh nooo!!!wrong page title",format(e))
 
 temperature_text = locators.temperature_text
-# least_priced_product =locators.least_priced_product
+least_priced_product =locators.least_priced_product
 moisturizers_button = locators.moisturizers_button
 price_of_all_products = locators.price_of_all
 sunscreens_button = locators.sunscreens_button
@@ -52,7 +52,7 @@ def get_least_priced_product():
     print("price list of all the products :",price_list_all_products)
     minimum_price = str(min(price_list_all_products))
     print("minimum price is :",minimum_price,"Rs")
-    least_item_text = item.find_element(by = By.XPATH,value = "//p[contains(text(),"+minimum_price+")]/following-sibling::button[@class='btn btn-primary']").click()
+    least_item_text = item.find_element(by = By.XPATH,value = least_priced_product%minimum_price).click()
 
 # Perform click action on Moisturizer if temperature is less than 20°C
 if  temperature <= 25 :
