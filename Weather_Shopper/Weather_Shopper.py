@@ -56,13 +56,13 @@ def click_least_priced_product():
     print("minimum price is :",minimum_price,"Rs")
     least_item_text=item.find_element(by=By.XPATH,value=least_priced_product%minimum_price).click()
 
-# Perform click action on Moisturizer if temperature is less than 20°C
+# Perform click action on Moisturizer if temperature is less than or equal to 25°C
 if  temperature <= 25 :
     time.sleep(2)
     moisturizers_button=driver.find_element(by=By.XPATH,value=moisturizers_button).click()
     items=driver.find_elements(by=By.XPATH,value=price_of_all_products)
     
-# Perform click action on Sunscreens if temperature is more than 30°C        
+# Perform click action on Sunscreens if temperature is more than 25°C        
 elif  temperature > 25 :
     time.sleep(2)
     sunscreens_button=driver.find_element(by=By.XPATH,value=sunscreens_button).click()
